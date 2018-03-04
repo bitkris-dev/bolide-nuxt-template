@@ -1,10 +1,8 @@
 {
   "name": "bolide-nuxt-template",
-  "version": "1.0.0",
-  "description": "Bolide is an advanced templated/boilerplate forked from nuxt.js starter-template.",
-  "main": "main.js",
-  "repository": "git@gitlab.com:bitkris-dev/bolide-nuxt-template.git",
-  "author": "Bitkris <kristian.webdeveloper@gmail.com>",
+  "version": "0.1.0",
+  "description": "Bolide is an advanced templated/boilerplate forked from nuxt.js starter-template",
+  "author": "Kristian Barrese <kristian.webdeveloper@gmail.com>",
   "license": "MIT",
-  "private": true
+  "keywords": ["bolide", "nuxt", "nuxtjs", "vuejs", "template", "boilerplate", "ssr"]
 }
