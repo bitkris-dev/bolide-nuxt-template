@@ -1,0 +1,1 @@
+bolide-nuxt-template
