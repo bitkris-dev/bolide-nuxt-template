@@ -5,6 +5,19 @@
 Get this template with the command:
 `vue init bitkris-dev/bolide-nuxt-template`
 
+The template is still in an alpha release and the question-based generator could lead to some errors.
+Currently, I didn't find anything broken. If you find something wrong, please [create a new issue](https://github.com/bitkris-dev/bolide-nuxt-template/issues/new).
+
+# Features
+* Question-based options template, basic SEO and package.json generator
+* You can automatically choose and install one of the following CSS Frameworks: [**Vuetify, Buefy, Bootstrap-Vue, AT-UI, MUSE-UI**]
+* Auto-install packages
+* Structure ready for multiple locales with **vue-i18n**
+* Installed and configured **vee-validate**
+* Some mutations and actions for SSR authentication token management
+* Shipped with **monomer-css**, my own CSS atomic framework
+* Shipped with **@nuxtjs/pwa** and **@nuxtjs/sitemap**
+
 # Build Setup
 
 ### Install dependencies
@@ -45,3 +58,4 @@ Other docs:
 [Nuxt PWA](https://pwa.nuxtjs.org/)
 [Vue-i18n](https://kazupon.github.io/vue-i18n/en/)
 [Vue-svgicon](https://mmf-fe.github.io/vue-svgicon/)
+[Monomer-css](https://github.com/bitkris-dev/monomer-css)
