@@ -2,6 +2,9 @@
 
 > Bolide is an advanced templated/boilerplate forked from nuxt.js starter-template
 
+Get this template with the command:
+`vue init bitkris-dev/bolide-nuxt-template`
+
 # Build Setup
 
 ### Install dependencies
