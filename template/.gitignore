@@ -1,0 +1,19 @@
+# dependencies
+node_modules
+bower_components
+*.lock
+
+# logs
+npm-debug.log
+
+# Nuxt build
+.nuxt
+.cache
+
+# Editor & Misc
+.vscode
+.directory
+.editorconfig.org
+
+# Nuxt generate
+dist

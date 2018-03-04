@@ -1,0 +1,8 @@
+{
+   "SEO": {
+      "title": "{{ title }}",
+      "desc": "{{ description }}",
+      "keywords": "{{ keywords }}",
+      "img": "/img/share/bolide-default.png"
+   }
+}

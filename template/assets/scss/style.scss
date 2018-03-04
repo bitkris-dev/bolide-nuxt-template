@@ -1,0 +1,16 @@
+// ----- COMMON ELEMENTS -----
+// #__nuxt { background-color: $grey-light; }
+
+html {
+   -ms-text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%;
+   -moz-osx-font-smoothing: grayscale;
+   -webkit-font-smoothing: antialiased;
+	box-sizing: border-box;
+}
+
+body div#__nuxt {
+	touch-action: auto !important;
+	user-select: auto !important;
+	-webkit-user-drag: auto !important;
+}
