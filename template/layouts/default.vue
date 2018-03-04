@@ -4,14 +4,11 @@
 	</div>
 </template>
 
-<style lang="scss">
-@import "../assets/scss/custom_vars.scss";
-@import "../node_modules/monomer-css/scss/monomer.scss";
-
+<style lang="css">
 {{#switch css_framework}}
 	{{#case "• Buefy" break=true}}
-@import "~bulma/bulma.sass";
-@import "~buefy/src/scss/buefy.scss";
+@import "bulma/css/bulma.css";
+@import "buefy/lib/buefy.min.css";
 	{{/case}}
 	{{#case "• Bootstrap-Vue" break=true}}
 @import 'bootstrap/dist/css/bootstrap.css';
@@ -21,6 +18,12 @@
 @import 'muse-ui/dist/muse-ui.css';
 	{{/case}}
 {{/switch}}
+</style>
+
+<style lang="scss">
+@import "../assets/scss/custom_vars.scss";
+@import "~monomer-css/scss/monomer.scss";
+@import "../assets/scss/style.scss";
 </style>
 
 <script>
