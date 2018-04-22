@@ -44,14 +44,7 @@ export default {
 				{ hid: 'og:description', property: 'og:description', content: this.description },
 
 				{ hid: 'twitter:title', property: 'twitter:title', content: title },
-				{ hid: 'twitter:description', property: 'twitter:description', content: this.description },
-
-				{ hid: 'place:location:latitude', property: 'place:location:latitude', content: '45.065302' },
-				{ hid: 'place:location:longitude', property: 'place:location:longitude', content: '7.691694' },
-				{ hid: 'business:contact_data:street_address', property: 'business:contact_data:street_address', content: 'Via Maria Vittoria, 38' },
-				{ hid: 'business:contact_data:locality', property: 'business:contact_data:locality', content: 'Turin' },
-				{ hid: 'business:contact_data:country_name', property: 'business:contact_data:country_name', content: 'Italy' },
-				{ hid: 'business:contact_data:postal_code', property: 'business:contact_data:postal_code', content: '10123' }
+				{ hid: 'twitter:description', property: 'twitter:description', content: this.description }
 			]
 		}
 	}
