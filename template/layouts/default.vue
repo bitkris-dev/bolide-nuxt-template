@@ -29,7 +29,6 @@
 <script>
 import Vue from 'vue'
 import Vuex from 'vuex'
-import * as Cookies from 'js-cookie'
 
 // eslint-disable-next-line
 import en from 'vee-validate/dist/locale/en.js'
@@ -71,6 +70,7 @@ Vue.use(svgicon, { tagName: 'svgicon' })
 Vue.config.productionTip = false
 
 export default {
+	middleware: ['auth'],
 	head () {
 		return {
 			title: this.$t('home.SEO.title'),
@@ -91,18 +91,12 @@ export default {
 			]
 		}
 	},
-	beforeMount () {
-		// We set this on nuxtServerInit. In this way we get clientId from server.
-		if (this.$store.state.token) {
-			Cookies.set('token', this.$store.state.token)
-		}
-	},
 	mounted () {
-		// Validator.localize(this.$store.state.locale)
+		Validator.localize(this.$store.state.locale)
 	},
 	watch: {
 		'$store.state.locale' (val) {
-			// Validator.localize(val)
+			Validator.localize(val)
 		}
 	}
 }

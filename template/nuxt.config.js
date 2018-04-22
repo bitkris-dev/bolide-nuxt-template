@@ -1,9 +1,9 @@
-var spa = {{ spa }} // enable SPA mode
+const CONFIG = require('./utils/config.js').default.getConfig(process.env.WP_ENV)
+var path = require('path')
+
+const spa = {{ spa }} // enable SPA mode
 
 module.exports = {
-	env: {
-		API_ENV: process.env.API_ENV || 'development'
-	},
 	generate: {
 		routes: [
 			// insert here a list of routes with dynamic params
@@ -43,6 +43,7 @@ module.exports = {
 	mode: spa ? 'spa' : 'universal',
 
 	build: {
+		extractCSS: true,
 		vendor: ['vue-i18n'],
 		extend (config, ctx) {
 			if (ctx.isDev && ctx.isClient) {
@@ -58,16 +59,38 @@ module.exports = {
 
 	module: {
 		rules: [
-			{ test: /\.scss$/, loader: 'style-loader!css-loader!sass-loader' },
 			{ test: /\.css$/, use: ['vue-style-loader', 'css-loader'] },
+			{ test: /\.scss$/, loader: 'style-loader!css-loader!sass-loader' },
 			{ test: /\.svg$/, loader: 'raw-loader', exclude: /node_modules/ }
 		]
 	},
 
 	plugins: ['~/plugins/i18n.js'],
 	modules: [
+		'@nuxtjs/axios',
+		'@nuxtjs/auth',
 		'@nuxtjs/sitemap',
-		// '@nuxtjs/onesignal',
 		['@nuxtjs/pwa', { manifest: false }]
-	]
+	],
+	axios: { baseURL: CONFIG.API_BASE },
+	auth: {
+		token: { name: 'token_{{ name }}' },
+		cookie: { name: 'token_{{ name }}', options: { path: '/' } },
+		redirect: {
+			login: false,
+			logout: '/',
+			user: false
+		},
+		strategies: {
+			local: {
+				endpoints: {
+					login: { url: '/api/v1/auth', method: 'post', propertyName: 'access_token' },
+					logout: false,
+					user: { url: '/api/v1/users/me', method: 'get', propertyName: 'data' }
+				},
+				tokenRequired: true,
+				tokenType: 'Bearer'
+			}
+		}
+	}
 }

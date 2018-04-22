@@ -3,3 +3,5 @@ test/
 \.vscode/
 
 template/package-lock\.json
+
+template/yarn-error\.log

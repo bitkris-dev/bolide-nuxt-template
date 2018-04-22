@@ -1,10 +1,8 @@
 # dependencies
 node_modules
-bower_components
-*.lock
 
 # logs
-npm-debug.log
+*.log
 
 # Nuxt build
 .nuxt

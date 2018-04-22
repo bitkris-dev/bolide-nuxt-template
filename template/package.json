@@ -23,6 +23,8 @@
 		"svg": "vsvg -s ./static/img/svg -t ./components/icons"
 	},
 	"dependencies": {
+		"@nuxtjs/auth": "^4.1.0",
+		"@nuxtjs/axios": "^5.3.1",
 		"@nuxtjs/pwa": "^2.0.5",
 		"@nuxtjs/sitemap": "^0.0.3",
 		"axios": "^0.17.1",
