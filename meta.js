@@ -30,6 +30,7 @@ let spinner = [
 let css_frameworks = [
 	'• Vuetify',
 	'• Buefy',
+	'• Element-UI',
 	'• Bootstrap-Vue',
 	'• AT-UI',
 	'• MUSE-UI',
@@ -39,6 +40,7 @@ let css_frameworks = [
 let css_frameworks_commands = [
 	` && yarn add vuetify`,
 	` && yarn add buefy`,
+	` && yarn add element-ui`,
 	` && yarn add bootstrap-vue bootstrap@4.0.0-beta.2`,
 	` && yarn add at-ui at-ui-style`,
 	` && yarn add muse-ui`

@@ -47,6 +47,11 @@ Vue.use(Vuetify)
 import Buefy from 'buefy'
 Vue.use(Buefy)
 	{{/case}}
+	{{#case "• Element-UI" break=true}}
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+Vue.use(ElementUI)
+	{{/case}}
 	{{#case "• Bootstrap-Vue" break=true}}
 import BootstrapVue from 'bootstrap-vue'
 Vue.use(BootstrapVue)

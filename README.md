@@ -10,7 +10,7 @@ Currently, I didn't find anything broken. If you find something wrong, please [c
 
 # Features
 * Question-based options template, basic SEO and package.json generator
-* You can automatically choose and install one of the following CSS Frameworks: [**Vuetify, Buefy, Bootstrap-Vue, AT-UI, MUSE-UI**]
+* You can automatically choose and install one of the following CSS Frameworks: [**Vuetify, Buefy, Element-UI, Bootstrap-Vue, AT-UI, MUSE-UI**]
 * Auto-install packages
 * Structure ready for multiple locales with **vue-i18n**
 * Installed and configured **vee-validate**
