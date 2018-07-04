@@ -29,6 +29,10 @@ exports.default = {
 			CONFIG = DEV_CONFIG; break
 		}
 
+		CONFIG.locales = [
+			{ code: 'en', name: 'ENG', iso: 'en-US', file: 'en-US.js' }
+		]
+
 		return CONFIG
 	}
 }

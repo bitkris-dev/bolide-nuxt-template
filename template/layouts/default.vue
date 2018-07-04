@@ -67,7 +67,7 @@ Vue.use(MuseUI)
 {{/switch}}
 Vue.use(Vuex)
 
-const vvConfig = { enableAutoClasses: true, locale: 'it', events: 'blur', errorBagName: 'vErrors' }
+const vvConfig = { enableAutoClasses: true, locale: 'en', events: 'blur', errorBagName: 'vErrors' }
 Vue.use(VeeValidate, vvConfig)
 
 Vue.use(svgicon, { tagName: 'svgicon' })
@@ -75,7 +75,6 @@ Vue.use(svgicon, { tagName: 'svgicon' })
 Vue.config.productionTip = false
 
 export default {
-	middleware: ['auth'],
 	head () {
 		return {
 			title: this.$t('home.SEO.title'),
@@ -97,11 +96,13 @@ export default {
 		}
 	},
 	mounted () {
-		Validator.localize(this.$store.state.locale)
+		this.setVeeValidateLocale(this.$i18n.loadedLanguages[0] || 'en')
+		this.$i18n.onLanguageSwitched = (oldLocale, newLocale) => { this.setVeeValidateLocale(newLocale) }
 	},
-	watch: {
-		'$store.state.locale' (val) {
-			Validator.localize(val)
+	methods: {
+		setVeeValidateLocale (locale) {
+			const lang = require('vee-validate/dist/locale/' + locale + '.js')
+			this.$validator.localize(locale, lang)
 		}
 	}
 }

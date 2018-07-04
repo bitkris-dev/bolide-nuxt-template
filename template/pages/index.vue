@@ -25,6 +25,9 @@ var title = '{{ title }}'
 var desc = '{{ description }}'
 
 export default {
+	name: 'index',
+	auth: false,
+	scrollToTop: true,
 	components: { Logo },
 	data () {
 		return {

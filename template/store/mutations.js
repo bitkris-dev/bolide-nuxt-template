@@ -2,8 +2,7 @@
 import extend from 'lodash/extend'
 
 import utilities from './mutations/utilities.js'
-import locales from './mutations/locales.js'
 
-var mutations = extend({}, utilities, locales)
+var mutations = extend({}, utilities)
 
 export default mutations

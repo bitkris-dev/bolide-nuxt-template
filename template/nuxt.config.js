@@ -1,5 +1,4 @@
 const CONFIG = require('./utils/config.js').default.getConfig(process.env.WP_ENV)
-var path = require('path')
 
 const spa = {{ spa }} // enable SPA mode
 
@@ -10,7 +9,6 @@ module.exports = {
 		]
 	},
 	router: {
-		middleware: 'i18n'
 	},
 	// Head, favicon, manifest and SEO
 	head: {
@@ -44,7 +42,6 @@ module.exports = {
 
 	build: {
 		extractCSS: true,
-		vendor: ['vue-i18n'],
 		extend (config, ctx) {
 			if (ctx.isDev && ctx.isClient) {
 				config.module.rules.push({
@@ -61,17 +58,38 @@ module.exports = {
 		rules: [
 			{ test: /\.css$/, use: ['vue-style-loader', 'css-loader'] },
 			{ test: /\.scss$/, loader: 'style-loader!css-loader!sass-loader' },
-			{ test: /\.svg$/, loader: 'raw-loader', exclude: /node_modules/ }
+			{ test: /\.svg$/, loader: 'raw-loader', exclude: /node_modules/ },
+			{ test: /\.woff(2)?(\?[a-z0-9#=&.]+)?$/, loader: 'url-loader?limit=10000&mimetype=application/font-woff' },
+			{ test: /\.(ttf|eot|svg)?(\?[a-z0-9#=&.]+)?$/, loader: 'url-loader' }
 		]
 	},
 
-	plugins: ['~/plugins/i18n.js'],
 	modules: [
-		'@nuxtjs/axios',
-		'@nuxtjs/auth',
+		['nuxt-i18n', {
+			locales: CONFIG.locales,
+			defaultLocale: 'en',
+			vueI18n: {
+				fallbackLocale: 'en'
+			},
+			lazy: true,
+			langDir: 'locales/'
+		}],
+		['@nuxtjs/pwa', {
+			manifest: false,
+			icon: { iconSrc: 'static/icon.png' },
+			meta: {
+				ogHost: 'https://crea-test.com'
+			}
+		}],
 		'@nuxtjs/sitemap',
-		['@nuxtjs/pwa', { manifest: false }]
+		'@nuxtjs/axios',
+		'@nuxtjs/auth'
 	],
+
+	icon: {
+		iconSrc: '[srcDir]/static/icon.png'
+	},
+
 	axios: { baseURL: CONFIG.API_BASE },
 	auth: {
 		token: { name: 'token_{{ name }}' },
