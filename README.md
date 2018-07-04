@@ -1,6 +1,6 @@
 # bolide-nuxt-template
 
-> Bolide-nuxt-template wants to be an advanced and always up-to-date version of **nuxt-community/starter-template**, with general purpose utilities and packages from the community (mainly nuxt-community) already installed and configured. 
+> Bolide-nuxt-template wants to be an advanced and always up-to-date version of **nuxt-community/starter-template**, with general purpose utilities and packages from the community (mainly nuxt-community) already installed and configured.
 
 -----------------------------------------
 
@@ -21,54 +21,55 @@ Currently, I didn't find anything broken. If you find something wrong, please [c
 
 # ✸ How to use
 
-Get this template with:
-`vue init bitkris-dev/bolide-nuxt-template`
+Get this template with:  
+`vue init bitkris-dev/bolide-nuxt-template`  
 
 #### Commands
-☼ Install dependencies:
-`npm run setup`
+☼ Install dependencies:  
+`npm run setup`  
 
-☼ Check packages distribution with webpack-bundle-analyzer:
-`npm run analyze`
+☼ Check packages distribution with webpack-bundle-analyzer:  
+`npm run analyze`  
 
-☼ Serve with hot reload:
-`npm run dev`
+☼ Serve with hot reload:  
+`npm run dev`  
 
-☼ Generate icons:
-Insert .svg files in the **/static/img/svg** directory and run:
-`npm run svg`
+☼ Generate icons:  
+Insert .svg files in the **/static/img/svg** directory and run:  
+`npm run svg`  
 
-then you can import svg icons with:
-`import '~/components/icons/icon-name.js'`
-and use as components with:
-`<svgicon name="icon-name" />`
+then you can import svg icons with:  
+`import '~/components/icons/icon-name.js'`  
+and use as components with:  
+`<svgicon name="icon-name" />`  
 
 -----------------------------------------
 
 #### Build commands
-`npm run build # API_ENV isn't set`
-`npm run build-staging # API_ENV = 'staging'`
-`npm run build-production # API_ENV = 'production'`
+`npm run build # API_ENV isn't set`  
+`npm run build-staging # API_ENV = 'staging'`  
+`npm run build-production # API_ENV = 'production'`  
 
 #### Start commands
-`npm run start # API_ENV isn't set`
-`npm run start-staging # API_ENV = 'staging'`
-`npm run start-production # API_ENV = 'production'`
+`npm run start # API_ENV isn't set`  
+`npm run start-staging # API_ENV = 'staging'`  
+`npm run start-production # API_ENV = 'production'`  
 
-#### Generate static project commands
-`npm run generate # API_ENV isn't set`
-`npm run generate-staging # API_ENV = 'staging'`
-`npm run generate-production # API_ENV = 'production'`
+#### Generate static project commands  
+`npm run generate # API_ENV isn't set`  
+`npm run generate-staging # API_ENV = 'staging'`  
+`npm run generate-production # API_ENV = 'production'`  
 
 -----------------------------------------
+
 # ✸ Docs
-For general explanation on how things work, checkout both the [Nuxt.js docs](https://github.com/nuxt/nuxt.js) and the [Nuxt.js starter-template docs](https://github.com/nuxt-community/starter-template), from which this templated forked.
+For general explanation on how things work, checkout both the [Nuxt.js docs](https://github.com/nuxt/nuxt.js) and the [Nuxt.js starter-template docs](https://github.com/nuxt-community/starter-template), from which this templated forked.  
 
-Other docs:
-[Nuxt-i18n](https://github.com/nuxt-community/nuxt-i18n)
-[@nuxtjs/pwa](https://pwa.nuxtjs.org/)
-[@nuxtjs/auth](https://github.com/nuxt-community/auth-module)
-[@nuxtjs/sitemap](https://github.com/nuxt-community/sitemap-module)
-
-[Vue-svgicon](https://mmf-fe.github.io/vue-svgicon/)
-[Monomer-css](https://github.com/bitkris-dev/monomer-css)
+Other docs:  
+[Nuxt-i18n](https://github.com/nuxt-community/nuxt-i18n)  
+[@nuxtjs/pwa](https://pwa.nuxtjs.org/)  
+[@nuxtjs/auth](https://github.com/nuxt-community/auth-module)  
+[@nuxtjs/sitemap](https://github.com/nuxt-community/sitemap-module)  
+  
+[Vue-svgicon](https://mmf-fe.github.io/vue-svgicon/)  
+[Monomer-css](https://github.com/bitkris-dev/monomer-css)  
